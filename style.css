@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root {
+  --azul: #168bff;
+  --amarelo: #ffdf43;
+  --rosa: #ff6b9d;
+  --roxo: #6339c8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 20px 12px;
+  background: linear-gradient(#5bd5ff, #d5f6ff);
+  color: #fff;
+  font-family: 'Press Start 2P', monospace;
+}
+
+.game-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.topo {
+  text-align: center;
+  color: #542b9c;
+  margin-bottom: 20px;
+}
+
+.logo {
+  font-size: clamp(15px, 3vw, 25px);
+  line-height: 1.8;
+  text-shadow: 3px 3px #fff;
+}
+
+.topo p {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.hud {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 15px 10px;
+  margin-bottom: 12px;
+  border: 4px solid #fff;
+  border-radius: 14px;
+  background: #6339c8;
+  box-shadow: 0 5px #3c2183;
+  font-size: clamp(9px, 1.7vw, 13px);
+}
+
+.hud div {
+  padding: 5px;
+}
+
+.game-frame {
+  position: relative;
+  overflow: hidden;
+  border: 5px solid #fff;
+  border-radius: 12px;
+  background: #66d8ff;
+  box-shadow: 0 8px #6339c8;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  image-rendering: pixelated;
+  touch-action: none;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  background: #251553aa;
+  text-align: center;
+}
+
+.escondido {
+  display: none !important;
+}
+
+.caixa {
+  width: min(100%, 560px);
+  padding: clamp(16px, 4vw, 30px);
+  background: #fff4cb;
+  color: #6339a7;
+  border: 5px solid #ffca46;
+  border-radius: 20px;
+  box-shadow: 0 7px #b66b35;
+}
+
+.gatinho-grande {
+  font-size: clamp(40px, 8vw, 70px);
+  margin-bottom: 18px;
+}
+
+.caixa h1,
+.caixa h2 {
+  font-size: clamp(12px, 2.4vw, 19px);
+  line-height: 2;
+}
+
+.caixa p {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.caixa .dica {
+  color: #a04e86;
+  font-size: 13px;
+}
+
+button {
+  font-family: 'Press Start 2P', monospace;
+  cursor: pointer;
+  border: 3px solid #fff;
+  border-radius: 10px;
+  background: var(--amarelo);
+  color: #63339a;
+  box-shadow: 0 5px #bd7d20;
+  padding: 16px;
+  transition: transform 0.1s;
+  touch-action: manipulation;
+  user-select: none;
+}
+
+.caixa button {
+  width: 100%;
+  margin-top: 12px;
+  font-size: clamp(10px, 2vw, 14px);
+  line-height: 1.7;
+}
+
+button:active {
+  transform: translateY(4px);
+  box-shadow: 0 1px #bd7d20;
+}
+
+button:focus-visible {
+  outline: 4px solid #168bff;
+  outline-offset: 3px;
+}
+
+.instrucoes {
+  color: #423077;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-top: 24px;
+}
+
+.controles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  margin: 20px auto;
+}
+
+.controles button {
+  min-width: 76px;
+  min-height: 60px;
+  font-size: 17px;
+  background: #ff6b9d;
+  color: #fff;
+  box-shadow: 0 5px #b92e69;
+}
+
+.controles #pular {
+  min-width: 145px;
+  background: #6339c8;
+  box-shadow: 0 5px #3c2183;
+}
+
+footer {
+  text-align: center;
+  color: #423077;
+  font: bold 12px Arial, sans-serif;
+  padding: 12px 0;
+}
+
+@media (max-width: 520px) {
+  body {
+    padding: 12px 8px;
+  }
+
+  .hud {
+    padding: 8px 4px;
+  }
+
+  .controles {
+    gap: 12px;
+  }
+
+  .controles button {
+    flex: 1;
+    min-width: 0;
+    min-height: 64px;
+    padding: 10px 4px;
+  }
+
+  .controles #pular {
+    flex: 1.5;
+    min-width: 0;
+  }
+
+  .instrucoes {
+    font-size: 12px;
+  }
+}

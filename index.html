@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gatinho Aventureiro</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="game-container">
+    <header class="topo">
+      <div class="logo">🐱 GATINHO AVENTUREIRO</div>
+      <p>Uma aventura cheia de moedas e diversão!</p>
+    </header>
+
+    <section class="hud">
+      <div>🪙 MOEDAS: <span id="moedas">0</span></div>
+      <div>❤️ VIDAS: <span id="vidas">3</span></div>
+      <div>🏆 PONTOS: <span id="pontos">0</span></div>
+    </section>
+
+    <div class="game-frame">
+      <canvas id="game" width="900" height="500"
+        aria-label="Jogo de plataforma do gatinho"></canvas>
+
+      <div id="telaInicial" class="overlay">
+        <div class="caixa">
+          <div class="gatinho-grande">🐱</div>
+          <h1>GATINHO AVENTUREIRO</h1>
+          <p>Corra, pule e colete moedas!</p>
+          <p class="dica">Cuidado com os monstrinhos pelo caminho!</p>
+          <button id="btnJogar">JOGAR AGORA ▶</button>
+        </div>
+      </div>
+
+      <div id="telaFinal" class="overlay escondido">
+        <div class="caixa">
+          <div id="emojiFinal" class="gatinho-grande">🏆</div>
+          <h2 id="tituloFinal">Fase concluída!</h2>
+          <p id="mensagemFinal">Você conseguiu!</p>
+          <p>🪙 Moedas: <strong id="totalMoedas">0</strong></p>
+          <p>⭐ Pontuação: <strong id="totalPontos">0</strong></p>
+          <button id="btnReiniciar">JOGAR NOVAMENTE ↻</button>
+        </div>
+      </div>
+    </div>
+
+    <section class="instrucoes">
+      <p>⌨️ <strong>Computador:</strong> ← → para andar e Espaço para pular</p>
+      <p>📱 <strong>Celular:</strong> use os botões abaixo</p>
+    </section>
+
+    <section class="controles">
+      <button id="esquerda" aria-label="Mover para esquerda">◀</button>
+      <button id="pular" aria-label="Pular">⬆ PULAR</button>
+      <button id="direita" aria-label="Mover para direita">▶</button>
+    </section>
+
+    <footer>
+      <p>🌈 Mostra Técnica • Feito com HTML, CSS e JavaScript</p>
+    </footer>
+  </main>
+</body>
+</html>
